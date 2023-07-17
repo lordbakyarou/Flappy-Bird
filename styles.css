@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#block {
+  width: 5%;
+  height: 100%;
+  background-repeat: repeat-y;
+  position: relative;
+  left: 100%;
+  animation: block 4s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -5%;
+  }
+}
+
+#hole {
+  width: 5%;
+  height: 30%;
+  background-color: white;
+  position: relative;
+  left: 100%;
+  top: -130%;
+  animation: block 4s infinite linear;
+}
+
+#bird {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+}
